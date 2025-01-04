@@ -131,7 +131,7 @@
             <div class="profile-item signature-item">
                 <span class="signature-text">个性签名</span>
                 <span class="word">嘿嘿</span>
-                <img src="1.png" class="signature-img" id="signatureImg">
+                <img src="1.jpg?t=1" class="signature-img" id="signatureImg">
             </div>
             <div class="line"></div>
             <div class="profile-item signature-item ">
@@ -151,6 +151,12 @@
 
     </script>
     <script>
+         // 页面加载完成后立即执行
+    window.onload = function() {
+        const signatureImg = document.getElementById('signatureImg');
+        // 添加时间戳到图片URL
+        signatureImg.src = signatureImg.src + '?t=' + new Date().getTime();
+    }
         const signatureImg = document.getElementById('signatureImg');
         
         let scale = 1;
