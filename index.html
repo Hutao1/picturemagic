@@ -1,244 +1,253 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>个性签名</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html,body{
-            width: 100%;
-            height: 100%;
-        }
-        .container{
-            width: 100vw;
-            min-height: 100vh;
-            background: #ededed;
-            font-size: 3rem;
-            overflow: hidden;
-        }
-        .top{
-            background: #fff;
-        }
-        .profile-page {
-            margin-top: 2rem;
-            background: #fff;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        -webkit-text-size-adjust: 100% !important;
 
-        .profile-item {
-            background: #fff;
-            padding: 15px;
-        }
+        text-size-adjust: 100% !important;
 
-        .signature-item {
-            display: flex;
-            align-items: center;
-        }
-        .signature-item>span:nth-child(2){
-            color: #999999;
-            margin-right: 15px;
-        }
-        .signature-text {
-            margin-right: 4.5rem;
-        }
-        .signature-text.comefrom{
-            margin-right: 10.5rem;
-        }
+        -moz-text-size-adjust: 100% !important;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        width: 100vw;
+        min-height: 100vh;
+        background: #ededed;
+        font-size: 3rem;
+        overflow: hidden;
+      }
+      .top {
+        background: #fff;
+      }
+      .profile-page {
+        margin-top: 2rem;
+        background: #fff;
+      }
 
-        .signature-img {
-            width: 2rem;
-            object-fit: cover;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
+      .profile-item {
+        background: #fff;
+        padding: 15px;
+      }
 
-        .draggable {
-            position: absolute;
-            z-index: 1000;
-        }
-        .touxiang{
-            width: 12.6rem;height: 12.6rem;
-            border-radius: 1rem;
-        }
-        .top1{
-            padding: 7.5rem 4.5rem 6.7rem 4.5rem;
-            display: flex;
-        }
-        .top1right{
-            margin-left: 3.5rem;
-            display: flex;
-            flex-direction: column;
-        }
-        .nicheng{
-            font-size: 4rem;
-            font-weight: 400;
-        }
-        .diqu{
-            font-size: 2.6rem;
-            color: #909090;
-            margin-top: 1rem;
-        }
-        .line{
-            width: 100%;
-            height: 1px;
-            background: #efefef;
-            margin-left: 3rem;
-        }
-        .top2{
-            padding: 3.5rem 2.5rem 3.5rem 3rem;
-            color: #090909;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .top2img{
-            width: 3.2rem
-        }
-        .bottom{
-            margin-top: 2rem;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3.5rem 3.5rem;
-            color: #455b8a;
-            font-size: 3.2rem;
-        }
+      .signature-item {
+        display: flex;
+        align-items: center;
+      }
+      .signature-item > span:nth-child(2) {
+        color: #999999;
+        margin-right: 15px;
+      }
+      .signature-text {
+        margin-right: 4.5rem;
+      }
+      .signature-text.comefrom {
+        margin-right: 10.5rem;
+      }
+
+      .signature-img {
+        width: 2rem;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+      }
+
+      .draggable {
+        position: absolute;
+        z-index: 1000;
+      }
+      .touxiang {
+        width: 12.6rem;
+        height: 12.6rem;
+        border-radius: 1rem;
+      }
+      .top1 {
+        padding: 7.5rem 4.5rem 6.7rem 4.5rem;
+        display: flex;
+      }
+      .top1right {
+        margin-left: 3.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .nicheng {
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      .diqu {
+        font-size: 2.6rem;
+        color: #909090;
+        margin-top: 1rem;
+      }
+      .line {
+        width: 100%;
+        height: 1px;
+        background: #efefef;
+        margin-left: 3rem;
+      }
+      .top2 {
+        padding: 3.5rem 2.5rem 3.5rem 3rem;
+        color: #090909;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .top2img {
+        width: 3.2rem;
+      }
+      .bottom {
+        margin-top: 2rem;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5rem 3.5rem;
+        color: #455b8a;
+        font-size: 3.2rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="top">
-            <div class="top1">
-                <img src="touxiang.png" alt="" class="touxiang">
-                <div class="top1right">
-                    <span class="nicheng">心怀若谷</span>
-                    <span class="diqu">地区：浙江 杭州</span>
-                </div>
-            </div>
-            <div class="line"></div>
-            <div class="top2">
-                <span class="top2title">备注和标签</span>
-                <img src="right.svg" class="top2img">
-            </div>
+      <div class="top">
+        <div class="top1">
+          <img src="touxiang.png" alt="" class="touxiang" />
+          <div class="top1right">
+            <span class="nicheng">心怀若谷</span>
+            <span class="diqu">地区：浙江 杭州</span>
+          </div>
         </div>
-        <div class="profile-page">
-            <div class="profile-item signature-item">
-                <span class="signature-text">个性签名</span>
-                <span class="word">嘿嘿</span>
-                <img src="1.jpg?t=1" class="signature-img" id="signatureImg">
-            </div>
-            <div class="line"></div>
-            <div class="profile-item signature-item ">
-                <span class="signature-text comefrom">来源</span>
-                <span>来自扫一扫</span>
-            </div>
+        <div class="line"></div>
+        <div class="top2">
+          <span class="top2title">备注和标签</span>
+          <img src="right.svg" class="top2img" />
         </div>
-        <div class="bottom">
-            <span>添加到通讯录</span>
+      </div>
+      <div class="profile-page">
+        <div class="profile-item signature-item">
+          <span class="signature-text">个性签名</span>
+          <span class="word">嘿嘿</span>
+          <img src="1.jpg?t=1" class="signature-img" id="signatureImg" />
         </div>
+        <div class="line"></div>
+        <div class="profile-item signature-item">
+          <span class="signature-text comefrom">来源</span>
+          <span>来自扫一扫</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>添加到通讯录</span>
+      </div>
     </div>
-    
-    <script>
-   //根据屏幕自适应设置根元素字体大小，10px为基准
-   //10px = 1rem
-   document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 10 + 'px';
 
+    <script>
+      //根据屏幕自适应设置根元素字体大小，10px为基准
+      //10px = 1rem
+      document.documentElement.style.fontSize =
+        (document.documentElement.clientWidth / 750) * 10 + "px";
     </script>
     <script>
-         // 页面加载完成后立即执行
-    window.onload = function() {
-        const signatureImg = document.getElementById('signatureImg');
+      // 页面加载完成后立即执行
+      window.onload = function () {
+        const signatureImg = document.getElementById("signatureImg");
         // 添加时间戳到图片URL
-        signatureImg.src = signatureImg.src + '?t=' + new Date().getTime();
-    }
-        const signatureImg = document.getElementById('signatureImg');
-        
-        let scale = 1;
-        let isDragging = false;
-        let startX, startY, initialX, initialY,initialLeft,initialTop;
-        let currentX = 0;
-        let currentY = 0;
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
+        signatureImg.src = signatureImg.src + "?t=" + new Date().getTime();
+      };
+      const signatureImg = document.getElementById("signatureImg");
 
-        signatureImg.addEventListener('click', (e) => {
-            
-            // console.log(rect.left, rect.top);
-            //获取word相对于浏览器的left和top
-            if (!signatureImg.classList.contains('draggable')) {
-                signatureImg.classList.add('draggable');
-                const word = document.querySelector('.word');
-                const rect = word.getBoundingClientRect();
-                signatureImg.style.left = rect.left+rect.width+15 + 'px';
-                signatureImg.style.top = rect.top + 'px';
-            }
-            const photo = signatureImg.getBoundingClientRect();
-            signatureImg.style.width = photo.width+10 + 'px';
-            // scale += 0.5;
-            // if (scale > 3) {
-            //     scale = 1;
-            //     signatureImg.style.transform = `scale(${scale})`;
-            //     signatureImg.classList.remove('draggable');
-            //     signatureImg.style.left = '';
-            //     signatureImg.style.top = '';
-            //     return;
-            // }
-            
-            // signatureImg.style.transform = `scale(${scale})`;
-        });
+      let scale = 1;
+      let isDragging = false;
+      let startX, startY, initialX, initialY, initialLeft, initialTop;
+      let currentX = 0;
+      let currentY = 0;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
 
-        signatureImg.addEventListener('touchstart', dragStart);
-        signatureImg.addEventListener('touchend', dragEnd);
-        signatureImg.addEventListener('touchmove', drag);
-
-        function dragStart(e) {
-            if (!signatureImg.classList.contains('draggable')) return;
-            
-            isDragging = true;
-            initialX = e.touches[0].clientX;
-            initialY = e.touches[0].clientY;
-            const photo = signatureImg.getBoundingClientRect();
-            initialLeft = photo.left;
-            initialTop = photo.top;
-            // initialX = e.touches[0].clientX - currentX;
-            // initialY = e.touches[0].clientY - currentY;
+      signatureImg.addEventListener("click", (e) => {
+        // console.log(rect.left, rect.top);
+        //获取word相对于浏览器的left和top
+        if (!signatureImg.classList.contains("draggable")) {
+          signatureImg.classList.add("draggable");
+          const word = document.querySelector(".word");
+          const rect = word.getBoundingClientRect();
+          signatureImg.style.left = rect.left + rect.width + 15 + "px";
+          signatureImg.style.top = rect.top + "px";
         }
+        const photo = signatureImg.getBoundingClientRect();
+        signatureImg.style.width = photo.width + 10 + "px";
+        // scale += 0.5;
+        // if (scale > 3) {
+        //     scale = 1;
+        //     signatureImg.style.transform = `scale(${scale})`;
+        //     signatureImg.classList.remove('draggable');
+        //     signatureImg.style.left = '';
+        //     signatureImg.style.top = '';
+        //     return;
+        // }
 
-        function dragEnd(e) {
-            isDragging = false;
-            
-            const rect = signatureImg.getBoundingClientRect();
-            if (parseFloat(signatureImg.style.left)+rect.width > windowWidth) {
-                // scale = 1;
-                // currentX = 0;
-                // currentY = 0;
-                // signatureImg.style.transform = `scale(${scale})`;
-                // signatureImg.classList.remove('draggable');
-                signatureImg.style.left = windowWidth + 'px';
-                setTimeout(() => {
-                    signatureImg.style.display = 'none';
-                }, 1000);
-            }
-        }
+        // signatureImg.style.transform = `scale(${scale})`;
+      });
 
-        function drag(e) {
-            if (!isDragging || !signatureImg.classList.contains('draggable')) return;
-            
-            e.preventDefault();
-            currentX = e.touches[0].clientX - initialX;
-            currentY = e.touches[0].clientY - initialY;
-            
-            // signatureImg.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
-            signatureImg.style.left = initialLeft + currentX + 'px';
-            signatureImg.style.top = initialTop + currentY + 'px';
-            // console.log( signatureImg.style.left,signatureImg.style.top,'drag');
+      signatureImg.addEventListener("touchstart", dragStart);
+      signatureImg.addEventListener("touchend", dragEnd);
+      signatureImg.addEventListener("touchmove", drag);
+
+      function dragStart(e) {
+        if (!signatureImg.classList.contains("draggable")) return;
+
+        isDragging = true;
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+        const photo = signatureImg.getBoundingClientRect();
+        initialLeft = photo.left;
+        initialTop = photo.top;
+        // initialX = e.touches[0].clientX - currentX;
+        // initialY = e.touches[0].clientY - currentY;
+      }
+
+      function dragEnd(e) {
+        isDragging = false;
+
+        const rect = signatureImg.getBoundingClientRect();
+        if (parseFloat(signatureImg.style.left) + rect.width > windowWidth) {
+          // scale = 1;
+          // currentX = 0;
+          // currentY = 0;
+          // signatureImg.style.transform = `scale(${scale})`;
+          // signatureImg.classList.remove('draggable');
+          signatureImg.style.left = windowWidth + "px";
+          setTimeout(() => {
+            signatureImg.style.display = "none";
+          }, 1000);
         }
+      }
+
+      function drag(e) {
+        if (!isDragging || !signatureImg.classList.contains("draggable"))
+          return;
+
+        e.preventDefault();
+        currentX = e.touches[0].clientX - initialX;
+        currentY = e.touches[0].clientY - initialY;
+
+        // signatureImg.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+        signatureImg.style.left = initialLeft + currentX + "px";
+        signatureImg.style.top = initialTop + currentY + "px";
+        // console.log( signatureImg.style.left,signatureImg.style.top,'drag');
+      }
     </script>
-</body>
-</html> 
+  </body>
+</html>
